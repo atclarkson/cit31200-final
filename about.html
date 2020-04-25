@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Super Duper Ice Cream Shop::About Us</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/eb7d6a2652.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <script id="handlebars-demo" type="text/x-handlebars-template">
+
+
+      <!--NAVIGATION-->
+            <nav class="navbar navbar-expand-lg navbar-dark navigation">
+                <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+                    <a class="navbar-brand mx-auto text-center" href="index.html">
+                        <span class="nav-header">{{header}}</span><br>
+                        <div class="logo"><i class="fad fa-ice-cream fa-3x mr-2" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #cc9900; --fa-secondary-color: #E799A3;"></i></div>
+                        <p class="h5 tagline">{{tagline}}</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+                    <ul class="navbar-nav mr-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="flavors.html">Flavors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+      <!--HERO SECTION-->
+            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center hero-about">
+                <div class="col-md-5 p-lg-5 mx-auto my-5">
+                    <h1 class="display-4 font-weight-normal">About Us</h1>
+                    <p class="lead font-weight-normal">{{tagline}}</p>
+                </div>
+            </div>
+
+
+      <!--MAIN CONTENT-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 about-headshot">
+      <img src="img/aboutImage.jpg" alt="Mr Man being all ice creamy" class="rounded-circle">
+    </div>
+    <div class="col-md-9 about-text">
+      <p>{{about}}</p>
+    </div>
+  </div>
+</div>
+
+
+      <!--FOOTER-->
+      <footer>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <i class="fad fa-ice-cream fa-2x mr-2"></i>
+
+                        <small class="d-block mb-3 text-muted">&copy; 2020</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Find us around the web</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Where to?</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="index.html">Home</a></li>
+                            <li><a class="text-muted" href="flavors.html">Flavors</a></li>
+                            <li><a class="text-muted" href="about.html">About Us</a></li>
+                            <li><a class="text-muted" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+      </footer>
+    </script>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+    <script src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!--<script src="./data.json"></script>-->
+  </body>
+</html>

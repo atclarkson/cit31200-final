@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Super Duper Ice Cream Shop::About Us</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/eb7d6a2652.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <script id="handlebars-demo" type="text/x-handlebars-template">
+
+
+      <!--NAVIGATION-->
+            <nav class="navbar navbar-expand-lg navbar-dark navigation">
+                <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+                    <a class="navbar-brand mx-auto text-center" href="index.html">
+                        <span class="nav-header">{{header}}</span><br>
+                        <div class="logo"><i class="fad fa-ice-cream fa-3x mr-2" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #cc9900; --fa-secondary-color: #E799A3;"></i></div>
+                        <p class="h5 tagline">{{tagline}}</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+                    <ul class="navbar-nav mr-auto text-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="flavors.html">Flavors</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+      <div class="flavor-wrapper">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top " src="img/{{flavors.0.image}}" alt="{{flavors.0.flavor}} Ice Cream Flavor">
+          <div class="card-body">
+            <h5 class="card-title">{{flavors.0.flavor}}</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#flavor-0">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/{{flavors.1.image}}" alt="{{flavors.1.flavor}} Ice Cream Flavor">
+          <div class="card-body">
+            <h5 class="card-title">{{flavors.1.flavor}}</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#flavor-1">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/{{flavors.2.image}}" alt="{{flavors.2.flavor}} Ice Cream Flavor">
+          <div class="card-body">
+            <h5 class="card-title">{{flavors.2.flavor}}</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#flavor-2">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/{{flavors.3.image}}" alt="{{flavors.3.flavor}} Ice Cream Flavor">
+          <div class="card-body">
+            <h5 class="card-title">{{flavors.3.flavor}}</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#flavor-3">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!--      MODALS-->
+<!--      MODAL-0-->
+      <div class="modal fade" id="flavor-0" tabindex="-1" role="dialog" aria-labelledby="flavor-0" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flavor-0Label">{{flavors.0.flavor}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="img/{{flavors.0.image}}" alt="{{flavors.0.flavor}} Ice Cream Flavor">
+            <div class="modal-body">
+              ${{flavors.0.cost}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      MODAL-1-->
+      <div class="modal fade" id="flavor-1" tabindex="-1" role="dialog" aria-labelledby="flavor-1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flavor-1Label">{{flavors.1.flavor}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="img/{{flavors.1.image}}" alt="{{flavors.1.flavor}} Ice Cream Flavor">
+            <div class="modal-body">
+              ${{flavors.1.cost}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      MODAL-2-->
+      <div class="modal fade" id="flavor-2" tabindex="-1" role="dialog" aria-labelledby="flavor-2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flavor-2Label">{{flavors.2.flavor}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="img/{{flavors.2.image}}" alt="{{flavors.2.flavor}} Ice Cream Flavor">
+            <div class="modal-body">
+              ${{flavors.2.cost}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      MODAL-3-->
+      <div class="modal fade" id="flavor-3" tabindex="-1" role="dialog" aria-labelledby="flavor-3" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flavor-3Label">{{flavors.3.flavor}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="img/{{flavors.3.image}}" alt="{{flavors.3.flavor}} Ice Cream Flavor">
+            <div class="modal-body">
+              ${{flavors.3.cost}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--FOOTER-->
+      <footer>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <i class="fad fa-ice-cream fa-2x mr-2"></i>
+
+                        <small class="d-block mb-3 text-muted">&copy; 2020</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Find us around the web</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a class="text-muted" href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Where to?</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="index.html">Home</a></li>
+                            <li><a class="text-muted" href="flavors.html">Flavors</a></li>
+                            <li><a class="text-muted" href="about.html">About Us</a></li>
+                            <li><a class="text-muted" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+      </footer>
+    </script>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+    <script src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!--<script src="./data.json"></script>-->
+  </body>
+</html>
